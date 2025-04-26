@@ -1,0 +1,9 @@
+{% extends 'prediction/base.html' %}
+
+{% block title %}Home - Breast Cancer Predictor{% endblock %}
+
+{% block content %}
+<h2>Welcome!</h2>
+<p>This app predicts breast cancer survival chances using Machine Learning.</p>
+<a href="{% url 'predict' %}"><button>Start Prediction</button></a>
+{% endblock %}

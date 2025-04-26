@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Survival Prediction</title>
+</head>
+<body>
+<h2>Enter Patient Data</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label>Age:</label>
+    <input type="number" name="age" required><br><br>
+
+    <label>Treatment Type:</label>
+    <select name="treatment_type" required>
+        <option value="Chemotherapy">Chemotherapy</option>
+        <option value="Radiation">Radiation</option>
+        <option value="Surgery">Surgery</option>
+    </select><br><br>
+
+    <label>Tumor Stage:</label>
+    <select name="tumor_stage" required>
+        <option value="I">I</option>
+        <option value="II">II</option>
+        <option value="III">III</option>
+        <option value="IV">IV</option>
+    </select><br><br>
+
+    <button type="submit">Predict</button>
+</form>
+</body>
+</html>
